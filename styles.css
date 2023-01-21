@@ -11,6 +11,7 @@ body {
     color: white;
     background-color: black;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
  /* All Content*/
@@ -23,6 +24,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     width: 600px;
+    height: 100%;
 }
 
 
@@ -53,7 +55,7 @@ body {
 /* Left Content*/
 #left-section {
     background-color: var(--dark-blue);
-    padding: 0 30px;
+    padding: 30px 30px;
 }
 #price {
     font-size: 30px;
@@ -96,4 +98,17 @@ body {
 }
 #right-paragraph {
     line-height: 1.5;
+}
+@media (max-width:600px) {
+    body {
+        background-color: red;
+    }
+    #content {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    #top-section {
+        grid-column: 1 / 1;
+        text-align: justify;
+    }
 }
